@@ -6,11 +6,13 @@ class ThemeToggle extends Component {
 
     componentDidMount() {
         document.documentElement.setAttribute("data-darkTheme", this.props.darkTheme);
+        document.querySelector("meta[name=theme-color]").setAttribute("content", this.props.darkTheme ? "#212121" : "#e8ecee");
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.darkTheme !== prevProps.darkTheme) {
             document.documentElement.setAttribute("data-darktheme", this.props.darkTheme);
+            document.querySelector("meta[name=theme-color]").setAttribute("content", this.props.darkTheme ? "#212121" : "#e8ecee");
         }
     }
 
