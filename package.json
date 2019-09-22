@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "webpack-dev-server --mode development --content-base public",
-        "build": "node_modules/.bin/webpack -p --mode production && cp public/* dist/"
+        "build": "node_modules/.bin/webpack -p --mode production"
     },
     "devDependencies": {
         "@babel/core": "^7.6.0",
