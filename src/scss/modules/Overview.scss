@@ -1,0 +1,26 @@
+.Overview {
+    position: relative;
+    display: flex;
+    height: 100vh;
+
+    .Login {
+        position: absolute;
+        cursor: pointer;
+        width: 160px;
+        padding: 20px;
+        background: white;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .Notes {
+        min-width: 250px;
+        height: 100%;
+    }
+
+    .SelectedNote {
+        height: 100%;
+    }
+}
