@@ -24,10 +24,9 @@ class Overview extends Component {
     render() {
         return (
             <div className={"Overview"}>
-                {!this.props.isLoggedIn &&
-                    <div className={"Login"} onClick={() => gapi.auth2.getAuthInstance().signIn()}>Login with Gmail</div>}
-                <Notes/>
-                <SelectedNote/>
+                {!this.props.isLoggedIn && <div className={"Login"} onClick={() => gapi.auth2.getAuthInstance().signIn()}>Login with Gmail</div>}
+                <Notes />
+                <SelectedNote />
             </div>
         );
     }

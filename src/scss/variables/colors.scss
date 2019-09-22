@@ -1,8 +1,15 @@
-
 :root {
-    --text: rgb(250, 250, 250);
-    --lighterBackground: #616161;
-    --lightBackground: #424242;
-    --background: #212121;
-    --lightBorder: #919191;
+    --text: rgb(10, 10, 10);
+    --lighterBackground: #f1f5f7;
+    --lightBackground: #e7e7e7;
+    --background: #e8ecee;
+    --lightBorder: #b9b9b9;
+
+    &[data-darkTheme="true"] {
+        --text: rgb(250, 250, 250);
+        --lighterBackground: #616161;
+        --lightBackground: #414141;
+        --background: #212121;
+        --lightBorder: #666666;
+    }
 }

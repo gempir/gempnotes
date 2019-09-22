@@ -8,6 +8,8 @@ export default (state, action) => {
             return { ...state, loading: action.loading };
         case "SET_SELECTED_NOTE":
             return { ...state, selectedNote: action.selectedNote };
+        case "SET_DARK_THEME":
+            return { ...state, darkTheme: action.darkTheme };
         default:
             return { ...state };
     }
