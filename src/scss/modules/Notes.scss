@@ -1,9 +1,9 @@
 .Notes {
-    background: $grey-medium;
+    background: var(--lightBackground);
     width: 10%;
 
     .Note {
-        border-bottom: 1px solid $grey-lighter;
+        border-bottom: 1px solid var(--lightBorder);
         padding: 15px;
         color: var(--text);
         line-height: 18px;
@@ -14,7 +14,11 @@
         cursor: pointer;
 
         &:hover {
-            background-color: var(--lightBackground);
+            background-color: var(--lighterBackground);
+        }
+
+        &.Note-Selected {
+            background-color: var(--lighterBackground);
         }
     }
 }

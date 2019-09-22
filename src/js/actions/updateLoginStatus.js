@@ -5,7 +5,6 @@ export default (isLoggedIn) => (dispatch) => {
         type: 'SET_IS_LOGGED_IN',
         isLoggedIn: isLoggedIn
     });
-    console.log("Login status: " + isLoggedIn);
     
     if (isLoggedIn) {
         dispatch(loadNotes());

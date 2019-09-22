@@ -8,11 +8,17 @@
         cursor: pointer;
         width: 160px;
         padding: 20px;
-        background: white;
+        border-radius: 3px;
+        color: var(--text);
+        background: var(--lightBackground);
         top: 20px;
         left: 0;
         right: 0;
         margin: auto;
+
+        &:hover {
+            background: var(--lighterBackground);
+        }
     }
 
     .Notes {
