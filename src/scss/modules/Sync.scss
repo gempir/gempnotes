@@ -1,0 +1,28 @@
+.Sync {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    .CloudSync {
+        g {
+            fill: var(--positive);
+        }
+
+        &.CloudSync-Loading g {
+            -webkit-animation: pulsate 2s ease-out;
+            -webkit-animation-iteration-count: infinite;
+
+            @-webkit-keyframes pulsate {
+                0% {
+                    fill: var(--positive);
+                }
+                50% {
+                    fill: var(--highlight);
+                }
+                100% {
+                    fill: var(--positive);
+                }
+            }
+        }
+    }
+}

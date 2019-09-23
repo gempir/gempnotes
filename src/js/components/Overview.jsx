@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import initializeNoteClient from "../actions/initializeNoteClient";
 import setSelectedNote from "../actions/setSelectedNote";
 import ThemeToggle from "./ThemeToggle";
+import Sync from "./Sync";
 
 class Overview extends Component {
 
@@ -29,6 +30,7 @@ class Overview extends Component {
                 <Notes />
                 <SelectedNote />
                 <ThemeToggle />
+                <Sync/>
             </div>
         );
     }
