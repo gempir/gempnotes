@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import reducer from "./store/reducer";
 import createInitialState from "./store/createInitialState";
 import Overview from './components/Overview';
+import persistState from './storage/persistState';
 
 
 export default class App extends Component {
@@ -13,6 +14,8 @@ export default class App extends Component {
 		super(props);
 
 		this.store = createStore(reducer, createInitialState(), applyMiddleware(thunk));
+
+		this.store.subscribe(() => persistState(this.store.getState()));
 	}
 
 	render() {

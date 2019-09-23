@@ -1,18 +1,15 @@
+import loadState from "../storage/loadState";
+
 export default () => {
 
-    let darkTheme = localStorage.getItem('darkTheme');
-    console.log(darkTheme);
-    if (darkTheme === null) {
-        darkTheme = true;
-    } else {
-        darkTheme = darkTheme == "true";
-    }
+    const persistedState = loadState();
 
     return {
         notes: [],
         selectedNote: null,
         loading: false,
         isLoggedIn: false,
-        darkTheme: darkTheme,
+        darkTheme: true,
+        ...persistedState,
     }
 }

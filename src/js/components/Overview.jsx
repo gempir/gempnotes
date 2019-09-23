@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Notes from "./Notes";
 import SelectedNote from "./SelectedNote";
 import { connect } from "react-redux";
-import loadGmailApi from "../actions/loadGmailApi";
+import initializeNoteClient from "../actions/initializeNoteClient";
 import setSelectedNote from "../actions/setSelectedNote";
 
 class Overview extends Component {
@@ -12,7 +12,7 @@ class Overview extends Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(loadGmailApi()).catch(console.error);
+        this.props.dispatch(initializeNoteClient()).catch(console.error);
     }
 
     componentDidUpdate(prevProps) {
