@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import setSelectedNote from '../actions/setSelectedNote';
-import ThemeToggle from "./ThemeToggle";
 
 class Notes extends Component {
     render() {
@@ -12,7 +11,6 @@ class Notes extends Component {
                         {note.snippet}
                     </div>
                 )}
-                <ThemeToggle />
             </div>
         );
     }
