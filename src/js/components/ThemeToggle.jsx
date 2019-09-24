@@ -30,8 +30,8 @@ class ThemeToggle extends Component {
                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 -->` }} />
                 <div className="theme">
-                    <input name="themetoggle" className="theme-input" type="checkbox" checked={this.props.darkTheme} onChange={() => this.props.dispatch(toggleTheme())} />
-                    <label htmlFor={"themetoggle"} className="theme-bg" />
+                    <input className="theme-input" type="checkbox" checked={this.props.darkTheme} onChange={() => this.props.dispatch(toggleTheme())} aria-label={"Dark/Light Theme Toggle"} />
+                    <div className="theme-bg" />
                     <div className="theme-switch">
                         <div className="theme-switch-figure" />
                         <div className="theme-switch-figureAlt" />

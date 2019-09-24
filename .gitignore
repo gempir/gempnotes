@@ -15,3 +15,5 @@ yarn-error.log*dist/
 
 dist/
 public/bundle.js
+public/service-worker.js
+public/precache-manifest.*.js

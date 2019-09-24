@@ -15,6 +15,16 @@ class Overview extends Component {
 
     componentDidMount() {
         this.props.dispatch(initializeNoteClient()).catch(console.error);
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -30,7 +40,7 @@ class Overview extends Component {
                 <Notes />
                 <SelectedNote />
                 <ThemeToggle />
-                <Sync/>
+                <Sync />
             </div>
         );
     }
